@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    float a, b, d, pi= 3.14;
+    float x, y;
+    cout << "\n 1 задача"<< endl; // 1 задача 
+    cout << "Введите ширину прямоугольника a=";
+    cin >> a;
+    cout << "Введите длину прямоугольника b=";
+    cin >> b;
+    float S = a * b;
+    float P = 2 * (a + b);
+    cout << "Площадь прямоугольника равна S=" << S << endl;
+    cout << "Периметр прямоугольника равен P=" << P << endl;
+    cout << "\n 2 задача" << endl; // 2 задача 
+    cout << "Введите диаметр окружности d=";
+    cin >> d;
+    float L = pi * d;
+    cout << "Длина окружности равна L=" << L << endl;
+    cout << "\n 3 задача" << endl; //  3 задача
+    cout << "Введите  любое значение a=";
+    cin >> a;
+    cout << "Введите  любое значение b=";
+    cin >> b;
+    float  sred = (a + b) / 2;
+    cout << "Среднее арифметическое этих чисел равна sred=" << sred << endl;
+    cout << " \n 4 задача" << endl; //  4 задача
+    cout << "Введите любое ненулевое число x=";
+    cin >> x;
+    cout << "Введите  любое ненулевое число y=";
+    cin >> y;
+    float sum = x * x + y * y;
+    float razn = x * x - y * y;
+    float proiz = (x * x) * (y * y);
+    float chastn = (x * x) / (y * y);
+    cout << "Сумма их квадратов равна sum= " << sum  << endl;
+    cout << "Разность их квадратов равна razn= " << razn << endl;
+    cout << "Произведение их квадратов равно proiz= " << proiz << endl;
+    cout << "Частное их квадратов равно chastn= " << chastn << endl;
+    cout << " \n 5 задача" << endl; //  5 задача
+    cout << "Введите любое ненулевое число x=";
+    cin >> x;
+    cout << "Введите  любое ненулевое число y=";
+    cin >> y;
+    float sum1 =  abs(x) + abs(y) ;
+    float razn1 = abs(x) - abs(y);
+    float proiz1 =  abs(x) * abs(y);
+    float chastn1 =  abs(x) /  abs(y) ;
+    cout << "Сумма их модулей равна sum= " << sum1 << endl;
+    cout << "Разность их модулей равна razn= " << razn1 << endl;
+    cout << "Произведение их модулей равно proiz= " << proiz1 << endl;
+    cout << "Частное их модулей равно chastn= " << chastn1 << endl;
+    return 0;
+}
