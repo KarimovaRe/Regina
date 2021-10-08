@@ -1,0 +1,81 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{   
+   float a,b,c;
+   cout<<"\nЗадание 1"<<endl;
+   cout<<"Ввести значение A=";
+   cin>>a;
+   cout<<"Ввести значение B=";
+   cin>>b;
+   c=a;
+   a=b;
+   b=c;
+   cout<<"A="<<a<<" и B="<<b<<endl;
+   
+     cout<<"\nЗадание 2"<<endl;
+   float d,k;
+   cout<<"Ввести значение A=";
+   cin>>a;
+   cout<<"Ввести значение B=";
+   cin>>b;
+   cout<<"Ввести значение C=";
+   cin>>c;
+   d=a;
+   k=b;
+   a=c;
+   b=d;
+   c=k;
+   cout<<"A="<<a<<" и B="<<b<<" и C="<<c<<endl;
+    
+     cout<<"\nЗадание 3"<<endl;
+   cout<<"Ввести значение A=";
+   cin>>a;
+   cout<<"Ввести значение B=";
+   cin>>b;
+   cout<<"Ввести значение C=";
+   cin>>c;
+   d=a;
+   k=c;
+   a=b;
+   b=k;
+   c=d;
+   cout<<"A="<<a<<" и B="<<b<<" и C="<<c<<endl;
+   
+   cout<<"\nЗадание 4"<<endl;
+   float x;
+    cout<<"Ввести значение x=";
+   cin>>x;
+   float y= 3 * pow((x),6) - 6 * pow((x),2) - 7;
+   cout<<"y="<<y<<endl;
+   
+    cout<<"\nЗадание 5"<<endl;
+   cout<<"Ввести значение x=";
+   cin>>x;
+   float y1= 4 * pow((x-3),6) - 7 * pow ((x-3),3) + 2;
+   cout<<"y="<<y1<<endl;
+    
+    cout<<"\nЗадание 6"<<endl;
+    float s;
+    cout<<"Ввести значение A=";
+   cin>>a;
+    s=a * a ; //значение A в квадрате
+    s= s * s; //значение A в 4 степени
+    s= s* s; //значение A в 8 степени
+    cout<<"A="<<s<<endl;
+    
+    cout<<"\nЗадание 7"<<endl;
+    float i,l;
+    cout<<"Ввести значение A=";
+   cin>>a;
+    l=a * a ; //значение A в 2 степени
+    i= l * a; //значение A в 3 степени
+    i= i * l;//значение A в 5 степени
+    l= i * i;//значение A в 10 степени
+    i= i * l;//значение A в 15 степени
+    cout<<"A="<<i<<endl;
+   
+  return 0;
+}
