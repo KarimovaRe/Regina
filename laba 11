@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -38,21 +39,33 @@ int main()
       else if (three<=one && three<=two){
         cout<<"Сумма: "<<one+two<<endl;
       }
-     
-      ////////////////////////////////
-       cout<<"\n Задание 3 <Определить, какая из двух последних точек (B или C) расположена ближе к A>"<<endl;
-       int A,B,C;
-       cout<<"A="; cin>>A;
-       cout<<"B="; cin>>B;
-       cout<<"C="; cin>>C;
-       if(abs(A-B)< abs(A-C)){
-           cout<<"Точка: B и расстояние:"<<abs(A-B)<<endl;
-       }
-       else 
-           cout<<"Точка: C и расстояние:"<<abs(A-C)<<endl;
        
-       //////////////////////////
-       cout<<"\n Задание 4 <Определить номер координатной четверти, в которой находится данная точка>"<<endl; 
+       ////////////////////////// 
+    cout<<"\n Задание 3 <Определить, какая из двух последних точек (B или C) расположена ближе к A>"<<endl;  
+    int x1, x2, x3, y1, y2, y3;
+	double rezab, rezac;
+	
+	cout<< "Введите координаты точек A,B,C"<<endl;
+	cout<<"A_X = "; cin>> x1;
+	cout<<"A_Y = "; cin>> y1;
+	cout<<"B_X = "; cin>> x2;
+	cout<<"B_Y = "; cin>> y2;
+	cout<<"C_X = "; cin>> x3;
+	cout<<"C_Y = "; cin>> y3;
+
+	rezab = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+	rezac = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+
+	 if(rezab < rezac) {
+           cout<<"Точка: B и расстояние:"<<rezab<<endl;
+       }
+      else if (rezab > rezac) {
+           cout<<"Точка: C и расстояние:"<<rezac<<endl;
+      }
+      else
+          cout<<"Расстояния равны";
+	
+	   cout<<"\n Задание 4 <Определить номер координатной четверти, в которой находится данная точка>"<<endl; 
        int x,y;
        cout<<"Координата X="; cin>>x;
        cout<<"Координата Y="; cin>>y;
@@ -67,6 +80,9 @@ int main()
        }
        else if (x>0 && y<0){
            cout<<"Номер координатной четверти:IV"<<endl;
+       }
+       else {
+         cout<<"Ошибка!Точка лежит на координатных осях OX и OY"<<endl;
        }
    ////////////////////////////////////// 
    cout<<"\n Задание 5 <Строка-описание>"<<endl;
