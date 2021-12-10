@@ -1,0 +1,91 @@
+#include <iostream>
+using namespace std;
+#include <math.h>
+
+int main()
+{
+
+   ///////////////////////////////////////////
+   cout<<"          №1"<<endl;
+  float c, m;
+   cout << "Введите стоимость конфект за 1 кг:";
+   cin >> c;
+   cout << "Стоимость конфект" << endl;
+   for  (m = 0.1; m <1.1;  m += 0.1)
+        cout << m << " кг = " <<  c*m << endl;
+
+///////////////////////////////////////////
+  cout<<"          №2"<<endl;
+ int N,i;
+  double p = 1;
+  double a = 1.1;
+  cout<<"Дано целое число N (> 0)"<<endl;
+  cout<<"Введите количество сомножителей N=";   cin>>N;
+  if (N>0){
+      for (int i = 1; i<=N; ++i) {
+    p *= a;
+    a += 0.1;
+  }
+  cout << "Ответ = " << p <<endl;
+  }
+  else 
+    cout<<"N должно быть положительным!"<<endl;
+    
+    ///////////////////////////////////////////
+  cout<<"          №3"<<endl;
+  
+  double s = 1, sum = 1; int k=0;
+   cout << "Введите число для возведения в квадрат - "; cin >> N;
+        if (N>0){
+    while ((sum / N) != N)
+    {
+       
+     
+        cout << s << " + ";
+        s += 2;
+        sum += s;
+    }
+    cout << s << " = " << sum << endl;
+  }
+  else
+   cout<<"N должно быть положительным!"<<endl;
+   
+    ///////////////////////////////////////////
+    int A, n;
+    
+    cout<<"          №4"<<endl;
+    cout << "введите число A" << endl;
+    cout << "A = ";cin >> A;
+    cout << "Индекс N= ";cin >> n;
+    s = 0; sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        cout << pow(A, i) << " + ";
+        sum += pow(A, i);
+    }
+    cout << pow(A, n) << " = " << sum + pow(A, n);
+  
+  cout<<"          №4"<<endl;
+cout << "введите число А и его индекс" << endl;
+    cout << "A = ";cin >> a;
+    cout << "Индекс = ";cin >> n;
+    summ = 0;
+    int chet = 0;
+    int nechet = 1;
+    for (chet, nechet; (nechet < n) || (chet < n); nechet+= 2, chet+= 2)
+    {
+        // отриц степень
+        cout << pow(a, chet) << " - " << pow(a, nechet) << " + ";                        
+        Schet += pow(a, chet);
+        Snechet -= pow(a, nechet);
+    }
+    if (n % 2 == 0)
+    {
+        cout << pow(a, n) << " = " << Schet + Snechet + pow(a, n) << endl;
+    }
+    else
+    {
+        cout<< "= " << Schet + Snechet << endl;
+    }
+    return 0;
+}
