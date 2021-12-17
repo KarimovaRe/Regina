@@ -1,0 +1,102 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b;
+    int i;
+    int j;
+   cout<<"      Задание №1"<<endl;
+   cout<<"Вывод всех целых чисел от A до B включительно"<<endl;
+   cout<<"Условие:A<B - целые и положительные"<<" Введите A="; cin>>a;
+   cout<<"B=";cin>>b;
+   if(a<b && a>=0 && b>=0){
+      
+    for  (i = a; i<=b;  ++i)
+     for(int j = 0; j < i; j++){
+     cout << i <<" ";
+    
+         }
+   }
+   else 
+    cout<<"Условие не выполнено!"<<endl; 
+/////////////////////////////////////////////////
+
+ float A,B,c;
+ float p;
+ cout<<"      Задание №2"<<endl;
+ cout<<"Даны положительные числа A и B (A > B)"<<endl;
+ cout<<"A=";cin>>A;
+ cout<<"B=";cin>>B;
+ if(A>B && A>=0 && B>=0) {
+    while (A >= B){
+       A -= B;
+    }
+    cout << "Незанятая часть А = " << A << endl;
+ }
+   else 
+    cout<<"Условие не выполнено!"<<endl; 
+/////////////////////////////////////////
+ int n, sum=1,k=1;
+ cout<<"      Задание №3"<<endl;
+ cout<<"Дано целое число N (> 1)"<<endl;
+ cout << "Введите число N="; cin >> n;
+ while (sum < n){   
+        k++;
+        sum += k;
+      }
+    cout << "K = " << k << " Сумма = " << sum; 
+ ////////////////////////////////////
+ int month;
+ double p,s=1000;
+ cout<<"      Задание №4"<<endl;
+    cout << "Начальный вклад = 1000 руб" << endl;
+    cout << "Введите процент(P) по вкладу (0 < P < 25)" << endl;
+    cout << "P = ";cin >> p;
+    month = 0;
+    while (s <= 1100){
+        s = s * (p / 100 + 1);
+        month++;
+    }
+    cout << "Количество месяцев = " << month << endl;
+    cout << "Итоговый размер вклада = " << s << endl; 
+    
+///////////////////////////////////
+ int a,b,per,vtr;
+cout <<"      Задание №5"<<endl;
+cout << "Даны целые положительные числа A и B. Найти их наибольший общий делитель"<<endl;
+  cout << "A="; cin >> a;
+  cout << "B="; cin >> b;
+  per=a;
+  vtr=b;
+    while (a!=b){
+           if (a>b){
+               a=a-b;
+           }
+           else 
+            b=b-a;
+       }
+       cout<<"NOD("<<per<<","<<vtr<<")"<<"="<<a; 
+//////////////////////////////
+int N,F;
+cout<<"Дано целое число N (> 1), являющееся числом Фибоначчи"<<endl;
+cout<<"Найти целое число K — порядковый номер числа Фибоначчи N"<<endl;
+cout<<"N="; cin>>N;
+int f=0;
+int f1=1;
+int f2=1;
+int k=2;
+cout<<"k:"<< k;
+cout<<"       f2:"<<f2;
+cout<<"  f1:"<<f1<<endl;;
+   while (f < N) {
+         k++;
+         cout<<"k:"<< k;
+        f = f2 + f1; cout<<"  N:"<<f;
+        f2 = f1;  cout<<"  f2:"<<f2;
+        f1 = f;   cout<<"  f1:"<<f1<<endl;
+    }
+    cout << "Ответ:" << k;
+    return 0;
+}
