@@ -1,0 +1,113 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    int N; int a=1;
+    int i;
+    int mass[100];
+    cout << "\n______№1_____" << endl;
+    cout << "Введите N>0" << endl;
+    cout << "N = "; cin >> N;
+    for (int i = 0; i < N;i++)
+    {
+
+     mass[i] = a;
+     cout << mass[i] << " ";
+     a += 2;
+    }
+//////////////////////////////////////////////////
+ cout << endl;
+  int A,D;
+  int step=0;
+  cout << "\n______№2_____" << endl;
+  cout << " Введите N (> 1), а также первый член A и знаменатель D геометрической прогрессии" << endl;
+  cout << "N = "; cin >> N;
+  cout << "A = "; cin >> A;
+  cout << "D = "; cin >> D;
+      for (int i = 0; i < N;i++){
+          mass [i]= A* pow(D, step);
+          cout << mass [i] << " ";
+          step++;
+      }
+ //////////////////////////////////////////////
+ int B;
+ cout << endl;
+  cout << "\n______№3_____" << endl;
+  cout << "Даны целые числа N (> 2), A и B" << endl;
+  cout << "N = "; cin >> N;
+  cout << "A = "; cin >> A;
+  cout << "B = "; cin >> B;
+  mass [0]=A;
+  mass [1]=B;
+  step = A + B;
+  cout << mass [0] << " " << mass [1] <<" ";
+   for (int i = 2; i < N;i++){
+       mass [i]=step;
+       cout << mass [i] << " ";
+       step = step * 2;
+     }
+  ////////////////////////////////////////////////
+  cout << endl;
+  int n;
+  N=0;
+    cout << "\n______№4_____" << endl;
+    cout << "Дан массив A размера N" << endl;
+    cout << "N = "; cin >> n; 
+             N = n - 1;
+    for (int i = 0; i < n;i++)
+    {
+        mass[i] = i + 1;
+        cout << mass[i] << " ";
+    }
+    
+    cout << "\n\n";
+    for (int i = 0; i < n/2;i++)
+    {
+        cout << mass[i] << " " << mass[N] << " ";
+        N--;
+
+    }
+   if (n % 2 == 1)
+    {
+        mass[n - 1] = n / 2 + 1;
+        cout << mass[n - 1] << endl;
+    }
+ ////////////////////////////////////////////////
+ cout << "\n______№5_____" << endl;
+  cout << "Введите число N " << endl;
+    cout << "N = "; cin >> n;
+    N = n - 1;
+    
+    for (int i = 0; i < n;i++)
+    {
+        mass[i] = i;
+        cout << mass[i] << " ";
+    }
+    cout << "\n\n";
+    for (int i = 1; i < n; i += 2)
+    {
+        cout << mass[i] << " ";
+    }
+    if (n % 2 == 0)
+    {
+        
+        for (int i = N; N >= 0; N -= 2)
+        {
+            cout << mass[N - 1] << " ";
+        }
+    }
+    else
+    {
+        for (int i = N; N >= 0; N -= 2)
+        {
+            cout << mass[N] << " ";
+        }
+    }
+    
+    
+   
+    return 0;
+}
